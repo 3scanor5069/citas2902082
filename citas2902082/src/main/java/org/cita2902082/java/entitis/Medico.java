@@ -3,23 +3,35 @@ package org.cita2902082.java.entitis;
 import org.cita2902082.java.entitis.enums.Especialidad;
 import org.cita2902082.java.entitis.enums.TipoIdentificacion;
 
-public class Medico {
-    public Integer id;
-    public String nombres;
-    public String apellidos;
-    public TipoIdentificacion tipoIdentificacion;
-    public Integer numeroIdentificación;
-    public Integer registroMedico;
-    public Especialidad especialidad;
-
-    public Medico(String nombres, String apellidos, TipoIdentificacion tipoIdentificacion, Integer numeroIdentificación,
-            Integer registroMedico, Especialidad especialidad) {
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.tipoIdentificacion = tipoIdentificacion;
-        this.numeroIdentificación = numeroIdentificación;
+public class Medico extends Usuario {
+    
+    private Integer registroMedico;
+    private Especialidad especialidad;
+    public Medico(Integer id, String nombre, String apellidos, TipoIdentificacion tipoIdentificacion,
+            Integer numeroIdentificaion, long numeroIdentificación, Integer registroMedico, Especialidad especialidad) {
+        //constructor clase padre
+        super(id, nombre, apellidos, tipoIdentificacion, numeroIdentificaion, numeroIdentificación);
         this.registroMedico = registroMedico;
         this.especialidad = especialidad;
     }
+    public Integer getRegistroMedico() {
+        return registroMedico;
+    }
+    public void setRegistroMedico(Integer registroMedico) {
+        this.registroMedico = registroMedico;
+    }
+    public Especialidad getEspecialidad() {
+        return especialidad;
+    }
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
+    }
+    @Override
+    public String toString() {
+        return 
+        super.toString() +
+        "Medico [registroMedico=" + registroMedico + ", especialidad=" + especialidad + "]";
+    }
 
+ 
 }

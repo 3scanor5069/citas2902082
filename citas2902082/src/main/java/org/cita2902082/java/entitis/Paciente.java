@@ -5,18 +5,18 @@ import java.time.LocalDateTime;
 import org.cita2902082.java.entitis.enums.TipoIdentificacion;
 
 public class Paciente {
-    public Integer id;
-    public String nombres;
-    public String apellidos;
-    public TipoIdentificacion tipoIdentificacion;
-    public Integer numeroIdentificación;
-    public String correoElectronico;
-    public Integer celular;
-    public LocalDateTime fechaNacimiento;
-    public Double altura;
-    public Double peso;
-    public TipoSangre tipoSangre;
-    public char factorRH;
+    private Integer id;
+    private String nombres;
+    private String apellidos;
+    private TipoIdentificacion tipoIdentificacion;
+    private Integer numeroIdentificación;
+    private String correoElectronico;
+    private Integer celular;
+    private LocalDateTime fechaNacimiento;
+    private Double altura;
+    private Double peso;
+    private TipoSangre tipoSangre;
+    private char factorRH;
 
     public Paciente(String nombres, String apellidos, TipoIdentificacion tipoIdentificacion,
             Integer numeroIdentificación, String correoElectronico, Integer celular, LocalDateTime fechaNacimiento,
@@ -33,5 +33,8 @@ public class Paciente {
         this.tipoSangre = tipoSangre;
         this.factorRH = factorRH;
     }
+
+
+    
 
 }
