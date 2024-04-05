@@ -2,16 +2,20 @@ package org.cita2902082.java.entitis;
 
 import java.time.LocalDateTime;
 
+import org.cita2902082.java.entitis.enums.Estado;
+
 public class CitaEnfermero extends Cita implements IAgendable{
+
+    public CitaEnfermero(LocalDateTime fecha, Estado estado, Paciente paciente, Consultorio consultorio) {
+        super(fecha, estado, paciente, consultorio);
+        //TODO Auto-generated constructor stub
+    }
 
     private String procedimiento;
     private Enfermero enfermero;
 
-    public CitaEnfermero(LocalDateTime fecha, Paciente paciente, String procedimiento, Enfermero enfermero) {
-        super(fecha, paciente);
-        this.procedimiento = procedimiento;
-        this.enfermero = enfermero;
-    }
+
+   
 
     public String getProcedimiento() {
         return procedimiento;
@@ -31,20 +35,17 @@ public class CitaEnfermero extends Cita implements IAgendable{
 
     @Override
     public void agendarCita(LocalDateTime fecha) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'agendarCita'");
+        super.setFecha(fecha);
     }
 
     @Override
     public void cancelarCita() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'cancelarCita'");
+        System.out.println("CITA DE ENFERMERIA CANCELADA");
     }
 
     @Override
     public void reAsignarCita(LocalDateTime fecha) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'reAsignarCita'");
+        super.setFecha(fecha);
     }
  
 

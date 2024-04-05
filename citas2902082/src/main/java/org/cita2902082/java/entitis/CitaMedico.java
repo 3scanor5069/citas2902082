@@ -4,17 +4,17 @@ import java.time.LocalDateTime;
 
 import org.cita2902082.java.entitis.enums.Estado;
 
-public class CitaMedico extends Cita implements IAgendable{
+public class CitaMedico extends Cita implements IAgendable {
 
     private String motivo;
     private Medico medico;
     private static Estado estado;
-    
-    public CitaMedico(LocalDateTime fecha, Paciente paciente, String motivo, Medico medico) {
-        super(fecha, estado, paciente);
+
+    public CitaMedico(LocalDateTime fecha, Estado estado, Paciente paciente, Consultorio consultorio, String motivo,
+            Medico medico) {
+        super(fecha, estado, paciente, consultorio);
         this.motivo = motivo;
         this.medico = medico;
-        this.estado = estado;
     }
 
     public String getMotivo() {
@@ -33,28 +33,33 @@ public class CitaMedico extends Cita implements IAgendable{
         this.medico = medico;
     }
 
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        CitaMedico.estado = estado;
+    }
+
+
     @Override
     public void agendarCita(LocalDateTime fecha) {
         super.setFecha(fecha);
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'agendarCita'");
     }
 
     @Override
     public void cancelarCita() {
-        this.estado = Estado.Cancelada;
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'cancelarCita'");
+        System.out.println("CITA DE ENFERMERIA CANCELADA");
     }
 
     @Override
     public void reAsignarCita(LocalDateTime fecha) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'reAsignarCita'");
+        super.setFecha(fecha);
     }
- 
-  
 
-
+    public void actualizarCita(CitaMedico cancelarCita) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'actualizarCita'");
+    }
 
 }

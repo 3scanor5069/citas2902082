@@ -7,18 +7,19 @@ public  abstract class Usuario {
     protected String nombre;
     protected String apellidos;
     protected TipoIdentificacion tipoIdentificacion;
-    protected Integer numeroIdentificaion;
-    protected long numeroIdentificación;
+    protected long numeroIdentificacion;
+
     
     
+ 
+
     public Usuario(Integer id, String nombre, String apellidos, TipoIdentificacion tipoIdentificacion,
-            Integer numeroIdentificaion, long numeroIdentificación) {
+            long numeroIdentificacion) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.tipoIdentificacion = tipoIdentificacion;
-        this.numeroIdentificaion = numeroIdentificaion;
-        this.numeroIdentificación = numeroIdentificación;
+        this.numeroIdentificacion = numeroIdentificacion;
     }
 
 
@@ -62,31 +63,22 @@ public  abstract class Usuario {
     }
 
 
-    public Integer getNumeroIdentificaion() {
-        return numeroIdentificaion;
+
+    public long getNumeroIdentificacion() {
+        return numeroIdentificacion;
     }
 
 
-    public void setNumeroIdentificaion(Integer numeroIdentificaion) {
-        this.numeroIdentificaion = numeroIdentificaion;
-    }
-
-
-    public long getNumeroIdentificación() {
-        return numeroIdentificación;
-    }
-
-
-    public void setNumeroIdentificación(long numeroIdentificación) {
-        this.numeroIdentificación = numeroIdentificación;
+    public void setNumeroIdentificacion(long numeroIdentificacion) {
+        this.numeroIdentificacion = numeroIdentificacion;
     }
 
 
     @Override
     public String toString() {
         return "Usuario [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", tipoIdentificacion="
-                + tipoIdentificacion + ", numeroIdentificaion=" + numeroIdentificaion + ", numeroIdentificación="
-                + numeroIdentificación + "]";
+                + tipoIdentificacion + ", numeroIdentificaion=" 
+                + numeroIdentificacion + "]";
     }
 
     //definir metodo toString
