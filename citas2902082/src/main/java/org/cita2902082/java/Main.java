@@ -77,7 +77,7 @@ public class Main {
          
 
 
-       System.out.println("fecha: " + grp.getFecha() + " Paciente: "+ grp.getPaciente().getNombres() + " " + grp.getPaciente().getApellidos() + " Medico: " + grp.getMedico().getNombre() + " " + grp.getMedico().getApellidos());
+       System.out.println("fecha: " + grp.getFecha() + " Consultorio: " + grp.getConsultorio().numero + " Paciente: "+ grp.getPaciente().getNombres() + " " + grp.getPaciente().getApellidos() + " Medico: " + grp.getMedico().getNombre() + " " + grp.getMedico().getApellidos());
 
       
 CitaMedico cancelarCita = escop;
